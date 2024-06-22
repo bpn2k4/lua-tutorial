@@ -112,7 +112,6 @@ function gg.choice(items, selected, message)
 end
 
 ---Clear the saved list.
-
 ---@return boolean | string any true or string with error.
 function gg.clearList()
   print()
@@ -120,7 +119,6 @@ function gg.clearList()
 end
 
 ---Clear the list of search results.
-
 ---@return nil any
 function gg.clearResults()
   print()
@@ -181,7 +179,6 @@ function gg.editAll(value, type)
 end
 
 ---Get active tab in the GameGuardian UI.
-
 ---@return integer any int One of the constants TAB_*.
 function gg.getActiveTab()
   print()
@@ -189,7 +186,6 @@ function gg.getActiveTab()
 end
 
 ---Gets the filename of the currently running script.
-
 ---@return string any The string with the filename of the currently running script.
 function gg.getFile()
   print()
@@ -197,7 +193,6 @@ function gg.getFile()
 end
 
 ---Gets the current line number of the script being executed.
-
 ---@return integer any The current line number of the script being executed.
 function gg.getLine()
   print()
@@ -205,7 +200,6 @@ function gg.getLine()
 end
 
 ---Return the contents of the saved list as a table.
-
 ---@return boolean | string any Table with results or string with error. Each element is a table with the following fields: address (long), value (number), flags (one of the constants TYPE_*), name (string), freeze (boolean), freezeType (one of the constants FREEZE_*), freezeFrom (string), freezeTo (string).
 function gg.getListItems()
   print()
@@ -213,7 +207,6 @@ function gg.getListItems()
 end
 
 ---Gets the string with the currently selected locale in the GameGuardian.
-
 ---@return string any The string with the currently selected locale in the GameGuardian.
 function gg.getLocale()
   print()
@@ -221,7 +214,6 @@ function gg.getLocale()
 end
 
 ---Return memory regions as bit mask of flags REGION_*.
-
 ---@return integer any Bit mask of flags REGION_*.
 function gg.getRanges()
   print()
@@ -253,7 +245,6 @@ function gg.getResults(maxCount, skip, addressMin, addressMax, valueMin, valueMa
 end
 
 ---Get the number of found results.
-
 ---@return integer any The number of found results.
 function gg.getResultsCount()
   print()
@@ -261,7 +252,6 @@ function gg.getResultsCount()
 end
 
 ---Returns the selected adresses in the memory editor.
-
 ---@return boolean | string any Table with adresses (long) or string with error.
 function gg.getSelectedElements()
   print()
@@ -269,7 +259,6 @@ function gg.getSelectedElements()
 end
 
 ---Returns the selected items in the saved lists.
-
 ---@return boolean | string any Table with results or string with error. Each element is a table with the following fields: address (long), value (number), flags (one of the constants TYPE_*), name (string), freeze (boolean), freezeType (one of the constants FREEZE_*), freezeFrom (string), freezeTo (string).
 function gg.getSelectedListItems()
   print()
@@ -277,7 +266,6 @@ function gg.getSelectedListItems()
 end
 
 ---Returns the selected items in the search results.
-
 ---@return boolean | string any Table with results or string with error. Each element is a table with three keys: address (long), value (number), flags (one of the constants TYPE_*).
 function gg.getSelectedResults()
   print()
@@ -300,7 +288,6 @@ end
 ---cmdLine - The contents of /proc/pid/cmdline. pid - PID of the process. x64 - True if the 64-bit process. RSS - The amount of RSS memory for the process, in KB.
 ---
 ---Read about PackageInfo and ApplicationInfo in Android for means each field.
-
 ---@return boolean | string any A table with information about the selected process or nil.
 function gg.getTargetInfo()
   print()
@@ -308,7 +295,6 @@ function gg.getTargetInfo()
 end
 
 ---Get the package name of the selected process, if possible.
-
 ---@return boolean | string any The package name of the selected process as string or nil.
 function gg.getTargetPackage()
   print()
@@ -340,7 +326,6 @@ function gg.gotoAddress(address)
 end
 
 ---Hides the UI button.
-
 ---@return nil any
 function gg.hideUiButton()
   print()
@@ -350,7 +335,6 @@ end
 ---Gets the click status of the ui button.
 ---
 ---The call resets the click status.
-
 ---@return boolean | string any true if the button has been clicked since the last check. false - if there was no click. nil - if the button is hidden.
 function gg.isClickedUiButton()
   print()
@@ -366,7 +350,6 @@ function gg.isPackageInstalled(pkg)
 end
 
 ---Get pause state of the selected process.
-
 ---@return boolean any true if the process paused or false otherwise.
 function gg.isProcessPaused()
   print()
@@ -374,7 +357,6 @@ function gg.isProcessPaused()
 end
 
 ---Check if the GameGuardian UI is open.
-
 ---@return boolean any true if the GameGuardian UI open or false otherwise.
 function gg.isVisible()
   print()
@@ -453,7 +435,6 @@ end
 ---Force kill the selected process.
 ---
 ---If you call this call too often, your script may be interrupted.
-
 ---@return boolean any true on success or false otherwise.
 function gg.processKill()
   print()
@@ -461,7 +442,6 @@ function gg.processKill()
 end
 
 ---Pauses the selected process.
-
 ---@return boolean any true on success or false otherwise.
 function gg.processPause()
   print()
@@ -469,7 +449,6 @@ function gg.processPause()
 end
 
 ---Resumes the selected process if it paused.
-
 ---@return boolean any true on success or false otherwise.
 function gg.processResume()
   print()
@@ -479,7 +458,6 @@ end
 ---Toggle the pause state of the selected process.
 ---
 ---If process paused then it will be resumed else it will be paused.
-
 ---@return boolean any true on success or false otherwise.
 function gg.processToggle()
   print()
